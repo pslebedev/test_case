@@ -1,0 +1,97 @@
+suite_id: "suite-uuid"
+suite_name: "Проверка функционала отправки сообщений. Позитивные"
+description: "Набор кейсов для проверки работы формы отправки сообщений"
+created_at: "2025-08-22T11:11:11Z"
+status: "done"
+created_by: "plebedev"
+
+test_cases:
+  - case_id: "case-uuid-1"
+    title: "Проверка отправки сообщения"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Contact"
+        waitingResult: "Открылось модальное окно New Message"
+      - action: "Ввести валидные данные в поле Contact Email"
+        waitingResult: "Данные введены"
+      - action: "Ввести невалидные данные в поле Contact Name"
+        waitingResult: "Данные введены"
+      - action: "Ввести в поле Message сообщение"
+        waitingResult: "Сообщение введено"
+      - action: "Кликнуть Send message"
+        waitingResult: "Сообщение отправлено"
+    post-conditions: []
+    priority: "high"
+    tags: ["отправка", "форма", "smoke"]
+
+  - case_id: "case-uuid-2"
+    title: "Проверка закрытия модального окна New Message с помощью кнопки Close"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Contact"
+        waitingResult: "Открылось модальное окно New Message"
+      - action: "Кликнуть Close"
+        waitingResult: "Модальное окно закрылось"
+    post-conditions: []
+    priority: "medium"
+    tags: ["закрытие", "UI"]
+
+  - case_id: "case-uuid-3"
+    title: "Проверка закрытия модального окна New Message с помощью кнопки Закрыть (крестик)"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Contact"
+        waitingResult: "Открылось модальное окно New Message"
+      - action: "Кликнуть на крестик (Закрыть)"
+        waitingResult: "Модальное окно закрылось"
+    post-conditions: []
+    priority: "medium"
+    tags: ["закрытие", "UI"]
+
+  - case_id: "case-uuid-4"
+    title: "Проверка увеличения поля Message"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Contact"
+        waitingResult: "Открылось модальное окно New Message"
+      - action: "Растянуть поле Message, увеличив его"
+        waitingResult: "Поле Message увеличено"
+    post-conditions: []
+    priority: "low"
+    tags: ["UI", "форма"]

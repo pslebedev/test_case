@@ -1,0 +1,143 @@
+suite_id: "suite-uuid"
+suite_name: "Проверка регистрации нового пользователя. Негативные"
+description: "Набор кейсов для проверки регистрации пользователя"
+created_at: "2025-08-22T11:11:11Z"
+status: "done"
+created_by: "plebedev"
+
+test_cases:
+  - case_id: "case-uuid-13"
+    title: "Проверка обязательности поля ввода Username"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    pre-conditions:
+      - action: "Пользователь находится на странице https://www.demoblaze.com/"
+    steps:
+      - action: "В навигационно меню кликнуть на Log in"
+        waitingResult: "Открылось модальное окно Log in"
+      - action: "Ввести валидные данные в поле password"
+        waitingResult: "Пароль введен"
+      - action: "Оставить поле Username пустым"
+        waitingResult: "Поле не заполнено"
+      - action: "Кликнуть Log in"
+        waitingResult: "Всплывает алерт “Please fill out Username and Password.”"
+    post-conditions: []
+    priority: "high"
+    tags: ["негативный", "валидация", "авторизация"]
+
+  - case_id: "case-uuid-14"
+    title: "Проверка обязательности поля ввода Password"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    pre-conditions:
+      - action: "Пользователь находится на странице https://www.demoblaze.com/"
+    steps:
+      - action: "В навигационно меню кликнуть на Log in"
+        waitingResult: "Открылось модальное окно Log in"
+      - action: "Ввести валидные данные в поле Username"
+        waitingResult: "Username введен"
+      - action: "Оставить поле Password пустым"
+        waitingResult: "Поле не заполнено"
+      - action: "Кликнуть Log in"
+        waitingResult: "Всплывает алерт “Please fill out Username and Password.”"
+    post-conditions: []
+    priority: "high"
+    tags: ["негативный", "валидация", "авторизация"]
+
+  - case_id: "case-uuid-15"
+    title: "Попытка авторизации без Username"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    pre-conditions:
+      - action: "Пользователь находится на странице https://www.demoblaze.com/"
+    steps:
+      - action: "В навигационно меню кликнуть на Log in"
+        waitingResult: "Открылось модальное окно Log in"
+      - action: "Ввести валидные данные в поле password"
+        waitingResult: "Пароль введен"
+      - action: "Оставить поле Username пустым"
+        waitingResult: "Поле не заполнено"
+      - action: "Кликнуть Log in"
+        waitingResult: "Всплывает алерт “Please fill out Username and Password.”"
+    post-conditions: []
+    priority: "high"
+    tags: ["негативный", "валидация", "авторизация"]
+
+  - case_id: "case-uuid-16"
+    title: "Попытка авторизации с неверным паролем"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    pre-conditions:
+      - action: "Пользователь находится на странице https://www.demoblaze.com/"
+    steps:
+      - action: "В навигационно меню кликнуть на Log in"
+        waitingResult: "Открылось модальное окно Log in"
+      - action: "Ввести валидные данные в поле Username (admin)"
+        waitingResult: "Username введен"
+      - action: "Ввести невалидные данные в поле Password (ww)"
+        waitingResult: "Пароль введен"
+      - action: "Кликнуть Log in"
+        waitingResult: "Всплывает алерт “Wrong password.”"
+    post-conditions: []
+    priority: "high"
+    tags: ["валидация", "авторизация"]

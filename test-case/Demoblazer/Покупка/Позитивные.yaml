@@ -1,0 +1,65 @@
+suite_id: "suite-uuid"
+suite_name: "Проверка покупки товара.Позитивные"
+description: "Набор кейсов для проверки Проверка покупки"
+created_at: "2025-08-22T11:11:11Z"
+status: "done"
+created_by: "plebedev"
+
+test_cases:
+  - case_id: "case-uuid-20"
+    title: "Проверка оформления заказа через корзину"
+    description: ""
+    estimatedTime: "5m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+      
+    links:
+      - name: "Docs"
+        value: "https://www.demoblaze.com/index.html"
+    attachments:
+      - name: "pay.png"
+        type: "image/png"
+        path: "tests/test-case/.attach/pay.png"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Home"
+        waitingResult: "Открылась главная страница"
+      - action: "Выбрать и кликнуть на товар (Samsung Galaxy S7)"
+        waitingResult: "Открылась страница товара"
+      - action: "Добавить товар в корзину, кликнуть Add to cart"
+        waitingResult: "Товар добавлен в корзину"
+      - action: "Перейти в раздел Cart, кликнуть Cart в навигационном меню"
+        waitingResult: "Открылась страница корзины"
+      - action: "Кликнуть на Place Order"
+        waitingResult: "Открылась форма оформления заказа"
+      - action: "Ввести в поле Name валидные данные"
+        waitingResult: "Данные введены"
+      - action: "Ввести в поле Country валидные данные"
+        waitingResult: "Данные введены"
+      - action: "Ввести в поле City валидные данные"
+        waitingResult: "Данные введены"
+      - action: "Ввести в поле Credit card валидные данные"
+        waitingResult: "Данные введены"
+      - action: "Ввести в поле Month валидные данные"
+        waitingResult: "Данные введены"
+      - action: "Ввести в поле Year валидные данные"
+        waitingResult: "Данные введены"
+      - action: "Кликнуть на Purchase"
+        waitingResult: "Отображается всплывающее окно с информацией о покупке"
+    post-conditions: []
+    priority: "high"
+    tags: ["оформление заказа"]

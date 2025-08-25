@@ -1,0 +1,70 @@
+suite_id: "suite-uuid"
+suite_name: "Проверка реестра товаров. Позитивные"
+description: "Набор кейсов для проверки регистрации пользователя"
+created_at: "2025-08-22T11:11:11Z"
+status: "done"
+created_by: "plebedev"
+
+
+test_cases:
+  - case_id: "case-uuid-17"
+    title: "Проверка корректного отображения карусели"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Home"
+        waitingResult: "Открылась главная страница"
+      - action: "Пролистать карусель"
+        waitingResult: "Карусель листается, изображения отображаются корректно"
+    post-conditions: []
+    priority: "medium"
+    tags: ["UI", "карусель", "home"]
+
+  - case_id: "case-uuid-18"
+    title: "Проверка корректной работы пагинации"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Home"
+        waitingResult: "Открылась главная страница"
+      - action: "Проскроллить вниз"
+        waitingResult: "Отображается блок пагинации"
+      - action: "Кликнуть на Next"
+        waitingResult: "Отображается следующая страница реестра"
+      - action: "Кликнуть на Previous"
+        waitingResult: "Отображается предыдущая страница реестра"
+    post-conditions: []
+    priority: "medium"
+    tags: ["UI", "пагинация", "home"]
+
+  - case_id: "case-uuid-19"
+    title: "Проверка отображения товаров по категориям"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Home"
+        waitingResult: "Открылась главная страница"
+      - action: "В группе категорий выбрать Phones"
+        waitingResult: "Отображаются товары категории Phones"
+      - action: "В группе категорий выбрать Laptops"
+        waitingResult: "Отображаются товары категории Laptops"
+      - action: "В группе категорий выбрать Monitors"
+        waitingResult: "Отображаются товары категории Monitors"
+    post-conditions: []
+    priority: "high"
+    tags: ["категории", "товары", "home"]

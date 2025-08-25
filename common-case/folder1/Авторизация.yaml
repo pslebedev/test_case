@@ -1,0 +1,36 @@
+suite_id: "63d8bce6-a1f9-4173-8af8-295587e17a7a"
+suite_name: "Общие кейсы авторизации"
+description: ""
+created_at: "2024-07-15T10:00:00Z"
+status: "done"
+created_by: "ikuzin"
+
+test_cases:
+  - case_id: "d9b76936-2b43-4a58-910d-839d0700727d"
+    title: "Авторизоваться"
+    description: ""
+    estimatedTime: "2m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+      - name: "Browser version"
+        value: "120"
+      - name: "OS"
+        value: "Windows"
+      - name: "OS version"
+    custom_fields:
+      - name: "Кто делает"
+        value: "Андрей"
+    steps:
+      - action: "Открыть главную страницу сайта"
+        waitingResult: "Открыта главная страница сайта"
+      - action: "Ввести логин"
+        waitingResult: "Введен логин"
+
+  - case_id: "5fe4f8ef-bd4e-4901-8320-263f76bcfa90"
+    title: "Логаут"
+    description: ""
+    estimatedTime: "2m"
+    steps:
+      - action: "Нажать кнопку Выйти"
+        waitingResult: "Пользователь вышел из системы"

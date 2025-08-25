@@ -1,0 +1,91 @@
+suite_id: "suite-uuid"
+suite_name: "Проверка функционала отправки сообщений. Позитивные"
+description: "Набор кейсов для проверки работы формы отправки сообщений"
+created_at: "2025-08-22T11:11:11Z"
+status: "done"
+created_by: "plebedev"
+
+test_cases:
+  - case_id: "case-uuid-5"
+    title: "Проверка обязательности поля ввода Contact Email"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    pre-conditions:
+      - action: "<Авторизоваться>"
+    steps:
+      - action: "В навигационно меню кликнуть на Contact"
+        waitingResult: "Открылось модальное окно New Message"
+      - action: "Оставить поле Contact Email пустым"
+        waitingResult: "Поле не заполнено"
+      - action: "Ввести невалидные данные в поле Contact Name"
+        waitingResult: "Данные введены"
+      - action: "Ввести в поле Message сообщение"
+        waitingResult: "Сообщение введено"
+      - action: "Кликнуть Send message"
+        waitingResult: "Валидация сработала"
+    post-conditions: []
+    priority: "high"
+    tags: ["валидация", "форма"]
+
+  - case_id: "case-uuid-6"
+    title: "Проверка обязательности поля ввода Contact Name"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Contact"
+        waitingResult: "Открылось модальное окно New Message"
+      - action: "Ввести валидные данные в поле Contact Email"
+        waitingResult: "Данные введены"
+      - action: "Оставить поле Contact Name пустым"
+        waitingResult: "Поле не заполнено"
+      - action: "Ввести в поле Message сообщение"
+        waitingResult: "Сообщение введено"
+      - action: "Кликнуть Send message"
+        waitingResult: "Валидация сработала"
+    post-conditions: []
+    priority: "high"
+    tags: ["форма"]
+
+  - case_id: "case-uuid-7"
+    title: "Проверка обязательности поля ввода Message"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    pre-conditions:
+      - action: "<Авторизация>"
+    steps:
+      - action: "В навигационно меню кликнуть на Contact"
+        waitingResult: "Открылось модальное окно New Message"
+      - action: "Ввести валидные данные в поле Contact Email"
+        waitingResult: "Данные введены"
+      - action: "Ввести невалидные данные в поле Contact Name"
+        waitingResult: "Данные введены"
+      - action: "Оставить поле Message пустым"
+        waitingResult: "Поле не заполнено"
+      - action: "Кликнуть Send message"
+        waitingResult: "Валидация сработала"
+    post-conditions: []
+    priority: "high"
+    tags: ["негативный", "форма"]

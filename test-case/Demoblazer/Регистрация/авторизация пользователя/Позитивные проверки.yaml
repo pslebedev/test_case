@@ -1,0 +1,81 @@
+suite_id: "suite-uuid"
+suite_name: "Проверка регистрации нового пользователя. Позитивные"
+description: "Набор кейсов для проверки регистрации пользователя"
+created_at: "2025-08-22T11:11:11Z"
+status: "done"
+created_by: "plebedev"
+
+test_cases:
+  - case_id: "case-uuid-11"
+    title: "Проверка успешной регистрации нового пользователя"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    links:
+      - name: "Docs"
+        value: "https://www.demoblaze.com/index.html"
+    attachments:
+      - name: "registry.png"
+        type: "image/png"
+        path: "tests/test-case/.attach/registry.png"
+
+    pre-conditions:
+      - action: "Пользователь находится на странице https://www.demoblaze.com/"
+    steps:
+      - action: "В навигационно меню кликнуть на Sign up"
+        waitingResult: "Открылось модальное окно Sign up"
+      - action: "Ввести уникальный username/password"
+        waitingResult: "Данные введены"
+      - action: "Кликнуть на Sign up"
+        waitingResult: "Всплывает алерт 'Sign up successful.'"
+    post-conditions: []
+    priority: "high"
+    tags: ["регистрация", "positive", "smoke"]
+
+test_cases:
+  - case_id: "case-uuid-12"
+    title: "Авторизация новым пользователем"
+    description: ""
+    estimatedTime: "3m"
+    environment:
+      - name: "Browser"
+        value: "Chrome"
+    custom_fields:
+      - name: "Комментарий к кейсу"
+        value: ""
+    iterations:
+      - iteration_id: "1"
+        params:
+          - name: "Number"
+            value: "1"
+      - iteration_id: "2"
+        params:
+          - name: "Number"
+            value: "2"
+    pre-conditions:
+      - action: "Пользователь находится на странице https://www.demoblaze.com/"
+    steps:
+      - action: "В навигационно меню кликнуть на Log in"
+        waitingResult: "Открылось модальное окно Log in"
+      - action: "Ввести данные нового созданного пользователя"
+        waitingResult: "Данные введены"
+      - action: "Кликнуть на Log in"
+        waitingResult: "Пользователь авторизован под новой учетной записью"
+    post-conditions: []
+    priority: "high"
+    tags: ["авторизация", "positive", "smoke"]
+
