@@ -1,4 +1,4 @@
-suite_id: "suite-uuid"
+suite_id: "8cebf7d7-14cb-4626-961b-a74e97b1cc9b"
 suite_name: "Проверка функционала отправки сообщений. Позитивные"
 description: "Набор кейсов для проверки работы формы отправки сообщений"
 created_at: "2025-08-22T11:11:11Z"
@@ -6,7 +6,7 @@ status: "done"
 created_by: "plebedev"
 
 test_cases:
-  - case_id: "case-uuid-1"
+  - case_id: "559a2473-1509-4c3d-b52a-33f11385d197"
     title: "Проверка отправки сообщения"
     description: ""
     estimatedTime: "3m"
@@ -42,7 +42,7 @@ test_cases:
     priority: "high"
     tags: ["отправка", "форма", "smoke"]
 
-  - case_id: "case-uuid-2"
+  - case_id: "8cb182b6-e148-44f7-accb-d64ad9c031d5"
     title: "Проверка закрытия модального окна New Message с помощью кнопки Close"
     description: ""
     estimatedTime: "2m"
@@ -60,7 +60,7 @@ test_cases:
     priority: "medium"
     tags: ["закрытие", "UI"]
 
-  - case_id: "case-uuid-3"
+  - case_id: "5c1a545b-d4d3-4775-82fb-fe0193bbe222"
     title: "Проверка закрытия модального окна New Message с помощью кнопки Закрыть (крестик)"
     description: ""
     estimatedTime: "2m"
@@ -78,7 +78,7 @@ test_cases:
     priority: "medium"
     tags: ["закрытие", "UI"]
 
-  - case_id: "case-uuid-4"
+  - case_id: "16d394a4-5680-4954-af60-0fb1a75e9300"
     title: "Проверка увеличения поля Message"
     description: ""
     estimatedTime: "2m"

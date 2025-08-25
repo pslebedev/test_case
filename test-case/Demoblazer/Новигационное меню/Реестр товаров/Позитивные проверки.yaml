@@ -1,4 +1,4 @@
-suite_id: "suite-uuid"
+suite_id: "50819c9b-e1cb-41ad-ad18-392c917bc84d"
 suite_name: "Проверка реестра товаров. Позитивные"
 description: "Набор кейсов для проверки регистрации пользователя"
 created_at: "2025-08-22T11:11:11Z"
@@ -7,7 +7,7 @@ created_by: "plebedev"
 
 
 test_cases:
-  - case_id: "case-uuid-17"
+  - case_id: "2d4e27c8-340a-4525-b6c0-a8f08e63a13d"
     title: "Проверка корректного отображения карусели"
     description: ""
     estimatedTime: "2m"
@@ -25,7 +25,7 @@ test_cases:
     priority: "medium"
     tags: ["UI", "карусель", "home"]
 
-  - case_id: "case-uuid-18"
+  - case_id: "c2fa92dd-9490-4967-b801-b30863635954"
     title: "Проверка корректной работы пагинации"
     description: ""
     estimatedTime: "3m"
@@ -47,7 +47,7 @@ test_cases:
     priority: "medium"
     tags: ["UI", "пагинация", "home"]
 
-  - case_id: "case-uuid-19"
+  - case_id: "964f5ad8-910b-4f2c-9384-8d68493b6144"
     title: "Проверка отображения товаров по категориям"
     description: ""
     estimatedTime: "3m"

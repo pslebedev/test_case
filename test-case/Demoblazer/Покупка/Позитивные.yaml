@@ -1,4 +1,4 @@
-suite_id: "suite-uuid"
+suite_id: "bc113da4-ea50-444d-8845-95061c7436d6"
 suite_name: "Проверка покупки товара.Позитивные"
 description: "Набор кейсов для проверки Проверка покупки"
 created_at: "2025-08-22T11:11:11Z"
@@ -6,7 +6,7 @@ status: "done"
 created_by: "plebedev"
 
 test_cases:
-  - case_id: "case-uuid-20"
+  - case_id: "aef01f33-4566-4409-b641-27b94740c6bc"
     title: "Проверка оформления заказа через корзину"
     description: ""
     estimatedTime: "5m"

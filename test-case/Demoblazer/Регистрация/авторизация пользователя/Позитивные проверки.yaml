@@ -1,4 +1,4 @@
-suite_id: "suite-uuid"
+suite_id: "f654ad3a-6bed-4392-b93d-2ac7319ea207"
 suite_name: "Проверка регистрации нового пользователя. Позитивные"
 description: "Набор кейсов для проверки регистрации пользователя"
 created_at: "2025-08-22T11:11:11Z"
@@ -6,7 +6,7 @@ status: "done"
 created_by: "plebedev"
 
 test_cases:
-  - case_id: "case-uuid-11"
+  - case_id: "81499da2-bef3-4eb0-9ef3-3a53542fc66f"
     title: "Проверка успешной регистрации нового пользователя"
     description: ""
     estimatedTime: "3m"
@@ -46,8 +46,7 @@ test_cases:
     priority: "high"
     tags: ["регистрация", "positive", "smoke"]
 
-test_cases:
-  - case_id: "case-uuid-12"
+  - case_id: "da5ba95a-80d3-4b55-94a9-5077d980921b"
     title: "Авторизация новым пользователем"
     description: ""
     estimatedTime: "3m"
