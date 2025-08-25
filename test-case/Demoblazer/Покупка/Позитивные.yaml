@@ -32,7 +32,10 @@ test_cases:
     attachments:
       - name: "pay.png"
         type: "image/png"
-        path: "tests/test-case/.attach/pay.png"
+    common_cases:
+      - case_id: "d9b76936-2b43-4a58-910d-839d0700727d"
+        name: "Авторизация"
+
     pre-conditions:
       - action: "<Авторизация>"
     steps:

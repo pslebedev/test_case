@@ -14,6 +14,9 @@ test_cases:
     environment:
       - name: "Browser"
         value: "Chrome"
+    common_cases:
+      - case_id: "d9b76936-2b43-4a58-910d-839d0700727d"
+        name: "Авторизация"
     pre-conditions:
       - action: "<Авторизация>"
     steps:
@@ -32,6 +35,9 @@ test_cases:
     environment:
       - name: "Browser"
         value: "Chrome"
+    common_cases:
+      - case_id: "d9b76936-2b43-4a58-910d-839d0700727d"
+        name: "Авторизация"
     pre-conditions:
       - action: "<Авторизация>"
     steps:
@@ -54,6 +60,9 @@ test_cases:
     environment:
       - name: "Browser"
         value: "Chrome"
+    common_cases:
+      - case_id: "d9b76936-2b43-4a58-910d-839d0700727d"
+        name: "Авторизация"
     pre-conditions:
       - action: "<Авторизация>"
     steps:

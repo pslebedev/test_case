@@ -7,7 +7,7 @@ created_by: "ikuzin"
 
 test_cases:
   - case_id: "d9b76936-2b43-4a58-910d-839d0700727d"
-    title: "Авторизоваться"
+    title: "Авторизация"
     description: ""
     estimatedTime: "2m"
     environment:
