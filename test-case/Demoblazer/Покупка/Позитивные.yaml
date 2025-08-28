@@ -1,6 +1,6 @@
 suite_id: "bc113da4-ea50-444d-8845-95061c7436d6"
 suite_name: "Проверка покупки товара.Позитивные"
-description: ~~"Набор кейсов для проверки Проверка покупки"~~
+description: "Набор кейсов для проверки Проверка покупки"
 created_at: "2025-08-22T11:11:11Z"
 status: "done"
 created_by: "plebedev"
@@ -23,7 +23,7 @@ test_cases:
             value: "1"
       - iteration_id: "2"
         params:
-          - name: "Number**"**
+          - name: "Number"
             value: "2"
       
     links:
